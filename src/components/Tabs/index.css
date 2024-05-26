@@ -1,0 +1,43 @@
+.tabs-component {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 400px;
+    border: 1px solid black;
+}
+
+.tabsHeader{
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid grey;
+    padding: 10px;
+}
+
+.tab {
+    color: grey;
+    cursor: pointer;
+}
+
+.active {
+    color: black;
+}
+
+.tabsContentContainer {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    height: 300px;
+    display: flex;
+    align-items: center;
+}

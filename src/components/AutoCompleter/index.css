@@ -1,0 +1,42 @@
+.autoCompleter-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.autoCompleter {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.input {
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    padding: 10px 20px;
+    outline: 0;
+    text-decoration: none;
+}
+
+.option-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.option {
+    color: white;
+    padding: 0 20px;
+    background-color: gray;
+    border-radius: 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}

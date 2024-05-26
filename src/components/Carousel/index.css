@@ -1,0 +1,51 @@
+.carouselContainer {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.carousel-item{
+    scroll-snap-align: start;
+    transition: transform 0.4s ease-in-out;
+}
+
+.carouselControl {
+    display: flex;
+}
+
+.prev {
+    position: absolute;
+    left: 0;   
+    top: 50%;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.next {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    background-color: white;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    color: black;
+    font-size: 20px;
+    margin-right: 10px;
+}

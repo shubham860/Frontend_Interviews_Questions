@@ -1,0 +1,59 @@
+.tic-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.tic-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 500px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}   
+
+.reset {
+    height: 30px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 0 20px;
+}
+
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+.block {
+    flex: 0 0 33.33%;
+    background-color: grey;
+    border: 1px solid grey;
+    height: 120px;
+    width: 60px;
+    font-size: 30px;
+    color: white;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.activeClass, .activeClass:hover {
+    color: black;
+    background-color: red;
+    font-size: 50px;
+    transition: ease-out 300ms;
+}
+
+.block:hover {
+    background-color: white;
+    color: black;
+}

@@ -1,0 +1,29 @@
+.progress-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    z-index: 30;
+}
+
+.progress-bar {
+    height: 20px;
+    width: 500px;
+    background-color: grey;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+}
+
+.progress {
+    background-color: green;
+    width: 100%;
+    position: absolute;
+    height: 30px;
+    transform: translateX(calc(100%));
+    transition: ease-in-out 500ms;
+}

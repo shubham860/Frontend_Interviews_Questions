@@ -1,0 +1,39 @@
+.app-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.accordian-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    cursor: pointer;
+}
+
+.accordian {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.accordian-heading {
+    display: flex;
+    height: 30px;
+    background-color: grey;
+    padding: 0 20px;
+    width: 400px;
+    align-items: center;
+    color: white;
+}
+
+.label {
+    flex: 1;
+}
+
+.arrowDown {
+    transform: rotate(180deg);
+}
