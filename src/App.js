@@ -12,12 +12,24 @@ import ProgressBar from './components/ProgressBar';
 import Pagination from './components/Pagination';
 import TicTacToe from './components/TicTacToe';
 import ModalComponent from './components/Modal';
+import ReduxTodoList from './components/Redux-todoApp';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import { reducers } from './components/Redux-todoApp/reducer';
+import Counter from './components/Counter';
 
 function App() {
+  const todoStore = createStore(reducers);
   return (
     <div className="App">
       <h1>ProgressBar</h1>
       <ProgressBar />
+      <h1>Counter using useReducer hook</h1>
+      <Counter />
+      <h1>Redux TodoList</h1>
+      <Provider store={todoStore}>
+        <ReduxTodoList />
+      </Provider>
       <h1>Modal</h1>
       <ModalComponent />
       <h1>Tic Tac Toe</h1>
