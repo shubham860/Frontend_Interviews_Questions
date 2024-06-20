@@ -20,44 +20,6 @@ export const useTicTacToe = () => {
         [2,4,6]
     ];
 
-    const getWinningPatterns = (n) => {
-        const winningPatterns = [];
-      
-        // Horizontal winning patterns
-        for (let i = 0; i < n; i++) {
-          winningPatterns.push(
-            Array(n)
-              .fill(0)
-              .map((_, index) => i * n + index)
-          );
-        }
-      
-        // Vertical winning patterns
-        for (let i = 0; i < n; i++) {
-          winningPatterns.push(
-            Array(n)
-              .fill(0)
-              .map((_, index) => index * n + i)
-          );
-        }
-      
-        // Diagonal winning patterns (only for n > 2)
-        if (n > 2) {
-          winningPatterns.push(
-            Array(n)
-              .fill(0)
-              .map((_, index) => index * (n + 1))
-          );
-          winningPatterns.push(
-            Array(n)
-              .fill(0)
-              .map((_, index) => (n - 1) * (n + 1) - index)
-          );
-        }
-      
-        return winningPatterns;
-      };
-
     const triggerNextRound = () => {
         setTimeout(() => onBoardReset(), 2000);
     }

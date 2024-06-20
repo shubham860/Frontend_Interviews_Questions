@@ -14,13 +14,13 @@ function renderDefaultList(option, index) {
 
 export default function AutoCompleterSearch(props) {
     const {
-        options = [],
-        renderInput = defaultInputField,
-        onFilter = defaultFilterMethod,
-        renderList = renderDefaultList,
-        onSelect,
-        noOptions = 'no result',
-        placeholder = 'search..'
+        options = [], // options is listing
+        renderInput = defaultInputField, // renderInput is input field is render otherwise defaultInputField
+        onFilter = defaultFilterMethod, // onFilter is filter method otherwise defaultFilterMethod
+        renderList = renderDefaultList, // renderList is list item render otherwise renderDefaultList
+        onSelect, // onSelect is select item
+        noOptions = 'no result', // noOptions is no result message
+        placeholder = 'search..'    // placeholder is input field placeholder
     } = props
 
     const [filterOptions, setFilterOptions] = useState([]);
