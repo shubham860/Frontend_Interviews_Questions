@@ -1,4 +1,7 @@
-# Interview Machine Coding Round Components
+# JavaScript Questions
+
+
+# React Interview Machine Coding Round Components
 
 1. Accordian
 2. Autocompleter
