@@ -17,6 +17,7 @@
 16. PolyFills of Debounce and Throttle
 17. PolyFills of once
 18. find the larget string from an array
+19. Iterator and Generators Example
 
 
 # React Machine Coding Components
