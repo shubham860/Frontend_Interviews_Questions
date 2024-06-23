@@ -19,7 +19,7 @@
 18. find the larget string from an array
 
 
-# React Interview Machine Coding Round Components
+# React Machine Coding Components
 
 1. Accordian
 2. Autocompleter
