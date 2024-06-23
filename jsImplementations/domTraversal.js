@@ -11,6 +11,7 @@ function DfsTraversal(element) {
 
 DfsTraversal(rootElement);
 
+// -------------------------------------------------------------------------------------- //
 
 const childrenQueue = [];
 function BfsTraversal(element) {

@@ -28,7 +28,7 @@ Promise.myAll = function (promises) {
 // const allPromises = Promise.myAll([testPromise1, testPromise2]);
 // console.log(allPromises.then(res => console.log(res)))
 
-
+// -------------------------------------------------------------------------------------- //
 
 //Promise.allSettled - return array of all the promises either resolved or rejected;
 Promise.myAllSettled = function (promises) {
@@ -62,6 +62,7 @@ Promise.myAllSettled = function (promises) {
 // const allPromises = Promise.myAllSettled([testPromise1, testPromise2]);
 // console.log(allPromises.then(res => console.log(res)).catch(err => console.log(err)));
 
+// -------------------------------------------------------------------------------------- //
 
 //Promise.race -> return first resolved promise that settles first and reject if any one rejected.
 Promise.myRace = function (promises) {
@@ -90,6 +91,7 @@ Promise.myRace = function (promises) {
 //     // Both resolve, but promise2 is faster
 // });
 
+// -------------------------------------------------------------------------------------- //
 
 //Promise.any - return first resolved promise that settles first and reject if all promised rejected.
 Promise.myAny = function(promises) {

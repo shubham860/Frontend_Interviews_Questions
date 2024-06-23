@@ -26,7 +26,7 @@ function throttle(fn, delay) {
     }
 }
 
-// // using context
+// using context
 // function throttle(fn, delay) {
 //     let flag=true;
 //     return function(...args) {

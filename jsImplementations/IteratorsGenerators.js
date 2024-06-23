@@ -14,12 +14,12 @@ function fruitsIterator(value) {
     }
 }
 
-const fruits = ['apple', 'mango', 'banana'];
-const data = fruitsIterator(fruits);
-console.log(data.next());
-console.log(data.next());
-console.log(data.next());
-console.log(data.next());
+// const fruits = ['apple', 'mango', 'banana'];
+// const data = fruitsIterator(fruits);
+// console.log(data.next());
+// console.log(data.next());
+// console.log(data.next());
+// console.log(data.next());
 
 function makeRangeIterator(start = 0, end = Infinity, step = 1) {
     let nextIndex = start;
@@ -46,3 +46,31 @@ console.log(itRanges.next());
 console.log(itRanges.next());
 console.log(itRanges.next());
 console.log(itRanges.next());
+
+// ----------------------------------------------------------------------------------------------------------- //
+
+// Generators - Generator is a alternative of iterator because it allows us to define iterative algo by writing 
+// single function whose execution is not continuous. 
+// function* name
+// it has their own next method and executes untill yield keyword
+
+function* makeRangeIterator(start = 0, end = Infinity, step = 1) {
+    let iterationCount = 0;
+    for (let i = start; i < end; i += step) {
+      iterationCount++;
+      yield i;
+    }
+    return iterationCount;
+}
+const ranges = makeRangeIterator(0,10);
+console.log(ranges.next());
+console.log(ranges.next());
+console.log(ranges.next());
+console.log(ranges.next());
+console.log(ranges.next());
+console.log(ranges.next());
+console.log(ranges.next());
+console.log(ranges.next());
+console.log(ranges.next());
+console.log(ranges.next());
+console.log(ranges.next());

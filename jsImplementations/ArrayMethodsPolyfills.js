@@ -9,6 +9,7 @@ Array.prototype.myMap = function(callback) {
 }
 // const data = [1,2,4,5].myMap((item, index) => item);
 
+// -------------------------------------------------------------------------------------- //
 
 // PollyFill of Filter
 Array.prototype.myFilter = function(callback) {
@@ -23,6 +24,8 @@ Array.prototype.myFilter = function(callback) {
 // const data = [1,2,4,5].myFilter((item, index) => item === 2);
 
 
+// -------------------------------------------------------------------------------------- //
+
 //PolyFill of reduce
 Array.prototype.myReduce = function(callback, initialState) {
     let accumulator = initialState;
@@ -36,6 +39,8 @@ Array.prototype.myReduce = function(callback, initialState) {
     return accumulator;
 }
 // const data = [1,2,4,5].myReduce((accumulator, currentValue) =>  accumulator+currentValue);
+
+// -------------------------------------------------------------------------------------- //
 
 //Polyfill of forEach
 Array.prototype.myForEach = function(callback) {
