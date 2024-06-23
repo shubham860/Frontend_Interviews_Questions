@@ -90,4 +90,18 @@ Array.prototype.myFindLastIndex = function(element) {
     }
     return lastIndex;
 }
-console.log([1,2,4,1].myFindLastIndex(1))
+// console.log([1,2,4,1].myFindLastIndex(1))
+
+// -------------------------------------------------------------------------------------- //
+
+//PolyFill of array.at 
+Array.prototype.myAt = function(index) {
+    if (index > this.length - 1) {
+        throw new Error("Index out of bound");
+    }
+    for (let i=0; i < this.length; i++) {
+        if (i === index) {
+            return this[i];
+        }
+    }
+}
