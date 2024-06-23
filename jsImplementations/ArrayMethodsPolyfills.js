@@ -50,5 +50,44 @@ Array.prototype.myForEach = function(callback) {
     }
     return results
 }
-const data = [1,2,4,5].myForEach(item => item*2);
-console.log(data);
+// const data = [1,2,4,5].myForEach(item => item*2);
+// console.log(data);
+
+// -------------------------------------------------------------------------------------- //
+
+//Polyfill of concat
+Array.prototype.myConcat = function(array) {
+    let output = this.slice();
+    for(let i=0; i<array.length; i++) {
+        output.push(structuredClone(array[i]));
+    }
+    return output;
+} 
+// console.log([2,4,5].myConcat([1,[2,4], [4,3], [3]]));
+
+// -------------------------------------------------------------------------------------- //
+
+//PolyFill of findIndex
+Array.prototype.myFindIndex = function(element) {
+    for (let i=0; i<this.length; i++) {
+        if(this[i] === element) {
+            return i;
+        } 
+    }
+    return -1;
+}
+// console.log([1,2,4].myFindIndex(2))
+
+// -------------------------------------------------------------------------------------- //
+
+//PolyFill of findLastIndex 
+Array.prototype.myFindLastIndex = function(element) {
+    let lastIndex = -1;
+    for(let i=0; i<this.length; i++) {
+        if(this[i] === element) {
+            lastIndex = i;
+        }
+    }
+    return lastIndex;
+}
+console.log([1,2,4,1].myFindLastIndex(1))
