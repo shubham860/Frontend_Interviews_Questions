@@ -19,6 +19,13 @@
 18. find the larget string from an array
 19. Iterator and Generators Example
 
+# Output Questions Bases on 
+
+1. Promises
+2. setTimeout
+3. Hoisting
+4. IFFEs
+5. this
 
 # React Machine Coding Components
 
