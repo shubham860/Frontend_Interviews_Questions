@@ -12,6 +12,26 @@ function debounce(fn, delay) {
     }
 }
 
+// "0 - M
+// 200 - S
+// 900 - D
+// 2000 - H
+// 3100 - O
+// 5000 - N
+// 5600 - I
+// 1000 ms"
+
+/*
+
+What timestamp, what input - soln - diff b/w two consecutive event is greater then or equal to given delay.
+
+MSD - 1900ms
+MSDH - 3000ms
+MSDHO - 4100ms
+MSDHONI - 6600ms
+
+*/
+
 
 function throttle(fn, delay) {
     let flag=true;
