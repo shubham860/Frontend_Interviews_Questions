@@ -18,8 +18,9 @@
 17. PolyFills of once
 18. find the larget string from an array
 19. Iterator and Generators Example
+20. Find path in object (a.b.c)
 
-# Output Questions Bases on 
+# Output Questions Based on 
 
 1. Promises
 2. setTimeout
