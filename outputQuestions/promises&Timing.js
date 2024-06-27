@@ -307,4 +307,32 @@ const timer2 = setTimeout(() => {
 // promise1 Promise {<fulfilled>: 'success'}
 // Promise {<rejected>: Error: error!!! at <anonymous>:7:9}
 */
+
 // ------------------------------------------------ //
+
+/*
+new Promise(res => {
+  console.log('hello 4');
+  setTimeout(() => {
+      res('hello 6')
+      console.log('hello 5');
+  })
+}).then(v => console.log(v))
+*/
+
+
+// ------------------------------------------------ //
+
+/*
+console.log('1');
+const func1 = async() => {
+    await console.log('2');
+    console.log('3');
+}
+func1();
+console.log('4');
+1
+2
+4
+3
+*/

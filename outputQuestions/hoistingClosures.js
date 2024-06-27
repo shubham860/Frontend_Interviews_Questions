@@ -36,7 +36,6 @@ console.log(typeof bar());
 */
 
 // ----------------------------------------------- //
-
 /*
 var x = 3;
 var foo = {
@@ -50,11 +49,11 @@ var foo = {
 }
 var go = foo.baz.bar;
 console.log(go()); 
-console.log(foo.baz.bar());
+// console.log(foo.baz.bar());
 // 3
 // 1
-
 */
+
 
 // ----------------------------------------------- //
 
@@ -74,15 +73,50 @@ sayHi();
 // ----------------------------------------------- //
 
 
-function sayHelloWorld() {
-  var sayGoodbyeWorld = function() {
-   return "Hello, World!";
-  };
- function sayGoodbyeWorld() {
-   return "Goodbye, World!";
-  }
-  console.log(sayGoodbyeWorld())
-}
-console.log(sayHelloWorld());
+// function sayHelloWorld() {
+//   var sayGoodbyeWorld = function() {
+//    return "Hello, World!";
+//   };
+//  function sayGoodbyeWorld() {
+//    return "Goodbye, World!";
+//   }
+//   console.log(sayGoodbyeWorld())
+// }
+// console.log(sayHelloWorld());
 
-// 
+// ----------------------------------------------- //
+
+// foo()
+
+// function foo() {
+//     console.log(1)
+// }
+
+// var foo = function(){
+//     console.log(2)
+// }
+
+// function foo() {
+//     console.log(3)
+// }
+
+// foo()
+
+// ----------------------------------------------- //
+
+
+let user = {
+    name: 'shubham',
+    age: 20,
+    sayHi() {
+        console.log(this.name);
+        console.log(user.name);
+    }
+  }
+  
+  const admin = user;
+  user = null;
+  admin.sayHi()
+
+  // shubham
+  // cannot reade property name of undefinded --> ref error
