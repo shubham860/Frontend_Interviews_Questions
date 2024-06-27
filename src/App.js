@@ -19,6 +19,7 @@ import { reducers } from './components/Redux-todoApp/reducer';
 import Counter from './components/Counter';
 import MultiStepForm from './components/MultiStepForm';
 import { useState } from 'react';
+import NestedComments from './components/NestedComments';
 
 function App() {
   const todoStore = createStore(reducers);
@@ -27,6 +28,8 @@ function App() {
     <div className="App">
       <h1>ProgressBar</h1>
       <ProgressBar />
+      <h1>Nested Comments</h1>
+      <NestedComments/>
       <h1>MultiStepForm</h1>
       <MultiStepForm formState={formState} setFormState={setFormState}/>
       <h1>Counter using useReducer hook</h1>
