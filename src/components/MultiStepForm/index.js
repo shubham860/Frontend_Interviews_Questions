@@ -1,7 +1,7 @@
 import { formConfig } from "./formConfig";
-import Stepper from "./Stepper";
+import Stepper from "../Stepper";
 import './index.css';
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function MultiStepForm({ formState, setFormState }) {
     const [currentStep, setStep] = useState(1);

@@ -1,4 +1,4 @@
-import './stepper.css';
+import './index.css';
 import { useMemo } from 'react';
 
 export default function Stepper({formConfig, currentStep, setStep}) {
