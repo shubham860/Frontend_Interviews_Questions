@@ -1,0 +1,67 @@
+.multiselect-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0 auto;
+    align-items: center;
+    gap: 20px;
+    max-width: 450px;
+}
+
+.input-container {
+    display: flex;
+    width: 100%;
+    border: 1px solid;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.pillContainer {
+    padding: 10px;
+    max-height: 150px;
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+}
+
+.pillInput {
+    height: 30px;
+    padding: 10px;
+    border: none;
+    font-size: 20px;
+    flex-grow: 1;
+}
+
+.pill {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 20px;
+    width: auto;
+    gap: 5px;
+}
+
+.closeBtn {
+    height: 10px;
+    width: 10px;
+    background-color: black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.options-container {
+    overflow-y: scroll;
+    height: 200px;
+    width: 100%;
+}

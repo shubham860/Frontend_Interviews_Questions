@@ -20,6 +20,7 @@ import Counter from './components/Counter';
 import MultiStepForm from './components/MultiStepForm';
 import { useState } from 'react';
 import NestedComments from './components/NestedComments';
+import MultiSelectInput from './components/MultiSelectInput';
 
 function App() {
   const todoStore = createStore(reducers);
@@ -28,6 +29,8 @@ function App() {
     <div className="App">
       <h1>ProgressBar</h1>
       <ProgressBar />
+      <h1>Multi Select Input</h1>
+      <MultiSelectInput/>
       <h1>Nested Comments</h1>
       <NestedComments/>
       <h1>MultiStepForm</h1>
