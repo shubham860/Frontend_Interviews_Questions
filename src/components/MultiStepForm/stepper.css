@@ -1,0 +1,56 @@
+.stepper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    position: relative;
+}
+
+.step-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.step {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    color: white;
+    background-color: black;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.activeStep {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.step-label {
+    font-size: 14px;
+}
+
+.step-line {
+    height: 2px;
+    background-color: black;
+    color: black;
+    position: absolute;
+    top: 40%;
+    width: 0%;
+    transition: all 0.3s ease-in-out;
+}

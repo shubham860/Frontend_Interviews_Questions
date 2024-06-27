@@ -17,13 +17,18 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { reducers } from './components/Redux-todoApp/reducer';
 import Counter from './components/Counter';
+import MultiStepForm from './components/MultiStepForm';
+import { useState } from 'react';
 
 function App() {
   const todoStore = createStore(reducers);
+  const [formState, setFormState] = useState({});
   return (
     <div className="App">
       <h1>ProgressBar</h1>
       <ProgressBar />
+      <h1>MultiStepForm</h1>
+      <MultiStepForm formState={formState} setFormState={setFormState}/>
       <h1>Counter using useReducer hook</h1>
       <Counter />
       <h1>Redux TodoList</h1>
