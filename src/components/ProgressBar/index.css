@@ -25,5 +25,5 @@
     position: absolute;
     height: 30px;
     transform: translateX(calc(100%));
-    transition: ease-in-out 500ms;
+    transition: ease-in-out 200ms;
 }
