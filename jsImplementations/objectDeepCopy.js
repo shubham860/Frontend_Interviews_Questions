@@ -4,29 +4,45 @@
 ** 3. Manual
 */
 
-function deepClone(object) {
-    if(object === null ||
-       object === undefined ||
-       typeof object === 'string' ||
-       typeof object === 'number' ||
-       typeof object === 'function' ||
-       typeof object === 'boolean' || 
-       typeof obj === 'symbol'
-    ) {
-        return object;
-    }
+function deepClone(obj) {
+    // for primitive type
+    if(Object(obj) !== obj) return obj;
+    if(obj instanceof Function) return obj;
+    if(obj instanceof Date) return new Date(obj);
+    if(obj instanceof RegExp) return new RegExp(obj);
 
-    if(Array.isArray(object)) {
-        return object.slice();
+    const result = Array.isArray(obj) ? obj.slice() : Object.create(Object.getPrototypeOf(obj));
+    for(let key in obj) {
+        if(obj.hasOwnProperty(key)) {
+            result[key] = deepClone(obj[key]);
+        }
     }
-
-    const clonedObject = {};
-    const keys = Object.keys(object);
-    for(let i=0; i<keys.length; i++) {
-        clonedObject[keys[i]] =  deepClone(object[keys[i]]);
-    }
-    return clonedObject;
+    return result;
 }
+
+// function deepClone(object) {
+//     if(object === null ||
+//        object === undefined ||
+//        typeof object === 'string' ||
+//        typeof object === 'number' ||
+//        typeof object === 'function' ||
+//        typeof object === 'boolean' || 
+//        typeof obj === 'symbol'
+//     ) {
+//         return object;
+//     }
+
+//     if(Array.isArray(object)) {
+//         return object.slice();
+//     }
+
+//     const clonedObject = {};
+//     const keys = Object.keys(object);
+//     for(let i=0; i<keys.length; i++) {
+//         clonedObject[keys[i]] =  deepClone(object[keys[i]]);
+//     }
+//     return clonedObject;
+// }
 
 
 const test = {
