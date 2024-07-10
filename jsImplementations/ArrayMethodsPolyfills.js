@@ -42,6 +42,23 @@ Array.prototype.myReduce = function(callback, initialState) {
 
 // -------------------------------------------------------------------------------------- //
 
+
+//PolyFill of reduceRight
+Array.prototype.myReduceRight = function(callback, initialState) {
+    let accumulator = initialState;
+    for(let i = this.length - 1; i >= 0; i--) {
+        if(accumulator !== undefined) {
+            accumulator = callback.call(undefined, accumulator, this[i], i, this)
+        } else {
+            accumulator = this[i];
+        }
+    }
+    return accumulator;
+}
+// const data = [1,2,4,5].myReduce((accumulator, currentValue) =>  accumulator+currentValue);
+
+// -------------------------------------------------------------------------------------- //
+
 //Polyfill of forEach
 Array.prototype.myForEach = function(callback) {
     let results = [];
