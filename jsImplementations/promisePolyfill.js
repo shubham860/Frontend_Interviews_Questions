@@ -1,77 +1,56 @@
-function MyPromise(executor) {
-    let self = this;
-    self.status = 'pending';
-    self.value = undefined;
-    self.reason = undefined;
-    self.onResolveCallbacks = [];
-    self.onRejectCallbacks = [];
-
-
-    function resolve(value) {
-        if(self.status === 'pending') {
-            self.status = 'fulfilled';
-            self.value = value;
-            self.onResolveCallbacks.forEach(callback => callback(value));
-        }
+function customPromise(executor) {
+    let onResolve, onReject, isCalled = false, 
+        isFulfilled = false, isRejected = false, output, err;
+  
+    this.then = function(resolveCallback) {
+      onResolve = resolveCallback;
+      if(!isCalled && isFulfilled) {
+        isCalled = true;
+        onResolve(output);
+      }
+      return this;
     }
-
-    function reject(reason) {
-        if(self.status === 'pending') {
-            self.status = 'rejected'
-            self.reason = reason;
-            self.onRejectCallbacks.forEach(callback => callback(reason))
-        }
+    
+    this.catch = function(rejectCallback) {
+      onReject = rejectCallback;
+      
+      if(!isCalled && isRejected) {
+        isCalled = true;
+        onReject(err);
+      }
+      return this;
     }
-
-    try {
-        executor(resolve, reject);
-    } catch (error) {
-        reject(error);
+  
+    function resolver(data) {
+      isFulfilled = true;
+      output = data;
+      
+      if(typeof onResolve=== 'function' && !isCalled){
+        isCalled = true;
+        onResolve(data);
+      }
     }
-}
-
-MyPromise.prototype.then = function(onResolve, onReject) {
-    let self = this;
-    return new MyPromise(function(resolve, reject) {
-        if(self.status === 'fulfilled') {
-            onResolve(self.value);
-            resolve(self.value);
-        } else if(self.status === 'rejected') {
-            onReject(self.reason);
-            reject(reason);
-        } else {
-            // adding callback into the onResolveCallbacks which
-            // executes when promise resolve and reject.
-            self.onResolveCallbacks.push(value => { 
-                onResolve(value); 
-                resolve(value);
-            })
-            self.onRejectCallbacks.push(reason => {
-                onReject(reason);
-                reject(reason);
-            });
-        }
-    })
-}
-
-MyPromise.prototype.catch = function(onReject) {
-    let self = this;
-    return new MyPromise(function(reject) {
-        if (self.status === "rejected") {
-            onReject(self.reason);
-            reject(self.reason);
-          } else {
-            self.onRejectCallbacks.push(reason => {
-                onReject(reason);
-                reject(reason);
-            });
-          }
-    })
+    
+    function rejecter(error) {
+      isRejected = true;
+      err = error;
+      
+      if(typeof onReject === 'function' && !isCalled){
+        isCalled = true;
+        onReject(error);
+      }
+    }
+    
+    executor(resolver, rejecter);
   }
 
-const testPromise = new MyPromise((resolve, reject) => {
-    reject('hello')
-})
+  let p1 = new customPromise(
+    (resolve, reject) => setTimeout(() => resolve('Resolved successfully', 1000))
+  );
+  p1.then((data) => console.log(data));
+  // Output - Resolved successfully
+  
+  let p2 = new customPromise((resolve, reject) => reject('reject right away'));
+  p2.catch((error) => console.log(error));
 
-testPromise.then(res => console.log(res));
-testPromise.catch(err => console.log('err', err))
+  // Output - Resolved right away
