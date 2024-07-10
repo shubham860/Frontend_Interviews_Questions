@@ -19,6 +19,7 @@
 18. find the larget string from an array
 19. Iterator and Generators Example
 20. Find path in object (a.b.c)
+21. Implementation of getElementByStyle
 
 # Output Questions Based on 
 
