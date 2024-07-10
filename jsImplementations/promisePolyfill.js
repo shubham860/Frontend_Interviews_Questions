@@ -4,6 +4,7 @@ function customPromise(executor) {
   
     this.then = function(resolveCallback) {
       onResolve = resolveCallback;
+      
       if(!isCalled && isFulfilled) {
         isCalled = true;
         onResolve(output);
