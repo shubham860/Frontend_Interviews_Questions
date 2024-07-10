@@ -55,7 +55,7 @@ Array.prototype.myReduceRight = function(callback, initialState) {
     }
     return accumulator;
 }
-// const data = [1,2,4,5].myReduce((accumulator, currentValue) =>  accumulator+currentValue);
+// const data = [1,2,4,5].myReduceRight((accumulator, currentValue) =>  accumulator+currentValue);
 
 // -------------------------------------------------------------------------------------- //
 

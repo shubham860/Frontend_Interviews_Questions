@@ -1,5 +1,5 @@
 # JavaScript Questions
-1. PolyFills of Array Methods (map, filter, reduce, forEach, concat, findIndex, lastIndexOf, at)
+1. PolyFills of Array Methods (map, filter, reduce, reduceRight, forEach, concat, findIndex, lastIndexOf, at)
 2. PolyFills of call, bind and apply
 3. Chaining Question using function and class.
 4. Class Operations
