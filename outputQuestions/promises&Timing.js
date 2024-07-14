@@ -82,7 +82,7 @@ setTimeout(() => {
 }, 0);
 fetch('https://www.ixigo.com')
 .then(res => console.log('response'))
-console.log(last);
+console.log('last');
 
 // Macro -> setTimout, axios.get (because it's done on browser as normal jscode and have lower priority then timing api) // micro - response
 // first
@@ -149,7 +149,7 @@ console.log('promise1:', promise1);
 console.log('promise2:', promise2);
 
 // 1
-// Promise { 'resolve1' }
+// Promise1: Promise {<fulfilled>: 'resolve1'}
 // promise2:  Promise { <pending> }
 // resolve 1
 */

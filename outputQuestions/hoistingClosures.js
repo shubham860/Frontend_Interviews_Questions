@@ -120,3 +120,12 @@ let user = {
 
   // shubham
   // cannot reade property name of undefinded --> ref error
+
+// ----------------------------------------------- //
+
+// (function() {
+//     var a=b=1;
+// })();
+// console.log(a); // reference error as a is not defined and iffe has local scope of its own
+// console.log(b); // 1
+

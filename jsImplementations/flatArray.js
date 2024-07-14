@@ -13,5 +13,5 @@ function flatArray(array) {
 }
 
 const array = [1, [2,3], 4, [5,6,7], [1,[4,3, [9]]]];
-console.log(flatArray())
+console.log(flatArray(array))
 // [1,2,3,4,5,6,7]

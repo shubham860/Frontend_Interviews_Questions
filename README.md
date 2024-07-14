@@ -29,6 +29,9 @@
 4. IFFEs
 5. this
 
+# Building Own React from scratch: 
+https://pomb.us/build-your-own-react/
+
 # React Machine Coding Components
 
 1. Accordian

@@ -7,6 +7,7 @@
 function deepClone(obj) {
     // for primitive type
     if(Object(obj) !== obj) return obj;
+    
     if(obj instanceof Function) return obj;
     if(obj instanceof Date) return new Date(obj);
     if(obj instanceof RegExp) return new RegExp(obj);
