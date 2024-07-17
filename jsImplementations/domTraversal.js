@@ -2,10 +2,10 @@ const rootElement = document.getRootNode();
 
 function DfsTraversal(element) {
     const childElements = element.children;
-    for(let i=0; i<childElement.length; i++) {
+    for(let i=0; i<childElements.length; i++) {
         let child = childElements[i];
         console.log(child);
-        DFS(child);
+        DfsTraversal(child);
     }
 }
 
@@ -13,7 +13,7 @@ DfsTraversal(rootElement);
 
 // -------------------------------------------------------------------------------------- //
 
-const childrenQueue = [];
+const queue = [];
 function BfsTraversal(element) {
     const childElement = element.children;
     for(let i=0; i<childElement.length; i++) {
