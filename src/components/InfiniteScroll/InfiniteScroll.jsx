@@ -5,7 +5,6 @@ export default function InfiniteScrollIOPattern() {
     const [productsData, setProductsData] = useState({});
     const [page, setPage] = useState(1)
     const loadingRef = useRef();
-    const containerRef = useRef();
 
     const fetchProducts = async () => {
         try {
@@ -40,7 +39,7 @@ export default function InfiniteScrollIOPattern() {
 
 
     return <div className="componentContainer">
-        <div className="scrollContainer" ref={containerRef}>
+        <div className="scrollContainer">
             {
                 productsData?.products?.map(product => {
                     const { title, thumbnail } = product
